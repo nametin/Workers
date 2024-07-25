@@ -1,0 +1,50 @@
+﻿<Window x:Class="Workers.Views.EditEmployeeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Düzenle" Height="350" Width="400">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="İsim:" Grid.Row="0" Grid.Column="0" Margin="5"/>
+        <TextBox x:Name="FirstNameTextBox" Grid.Row="0" Grid.Column="1" MaxLength="10" Margin="5"/>
+
+        <TextBlock Text="Soyisim:" Grid.Row="1" Grid.Column="0" Margin="5"/>
+        <TextBox x:Name="LastNameTextBox" Grid.Row="1" Grid.Column="1"  MaxLength="15"  Margin="5"/>
+
+        <TextBlock Text="Pozisyon:" Grid.Row="2" Grid.Column="0" Margin="5"/>
+        <ComboBox x:Name="PositionComboBox" Grid.Row="2" Grid.Column="1" Margin="5">
+            <ComboBoxItem Content="Yazılım Mühendisi" />
+            <ComboBoxItem Content="Test Mühendisi" />
+            <ComboBoxItem Content="Kıdemli Yazılım Mühendisi" />
+            <ComboBoxItem Content="Kıdemli Test Mühendisi" />
+            <ComboBoxItem Content="Lider Mühendis" />
+            <ComboBoxItem Content="Kıdemli Lider Mühendis" />
+        </ComboBox>
+
+        <TextBlock Text="Deneyim:" Grid.Row="3" Grid.Column="0" Margin="5"/>
+        <TextBox x:Name="ExperienceTextBox" Grid.Row="3" Grid.Column="1" Margin="5"/>
+
+        <TextBlock Text="Durum:" Grid.Row="4" Grid.Column="0" Margin="5"/>
+        <ComboBox x:Name="StatusComboBox" Grid.Row="4" Grid.Column="1" Margin="5">
+            <ComboBoxItem Content="İşe Alım" />
+            <ComboBoxItem Content="İşten Çıkarma" />
+        </ComboBox>
+
+        <StackPanel Grid.Row="6" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+            <Button Content="Kaydet" Width="80" Margin="5" Click="SaveButton_Click"/>
+            <Button Content="İptal" Width="80" Margin="5" Click="CancelButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
